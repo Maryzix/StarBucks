@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>StarBucks Website</title>
+</head>
+<body>
+    <section>
+        <!--CIRCULO COLORIDO-->
+        <div class="circle"></div>
+        <header>
+            <!--MENU NAV-->
+            <a href="#" ><img src="assets/logo.png" class="logo"></a>
+            <ul>
+                <li class="nav"><a href="#">Home</a></li>
+                <li class="nav"><a href="#">Menu</a></li>
+                <li class="nav"><a href="#">What's About</a></li>
+                <li class="nav"><a href="#">Contact Us</a></li>
+            </ul>
+        </header>
+        <!--PARTE DO TEXTO-->
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffe <br> It's <span>StarBucks</span></h2>
+                <p>Lorem ipsum dolor sit amet. Non culpa voluptatum id sint odit est voluptatem porro id perferendis fuga est deserunt nihil eum magnam incidunt. Vel error recusandae id illo beatae ut quia eveniet aut consequatur voluptatibus.  </p>
+                <a  href="#">Learn More!</a>
+            </div>
+        </div>
+       <!--IMAGEM DO COPO DA DIREITA COM COR DE FUNDO-->
+        <div class="imgBox">
+        <img src="assets/img1.png" class="starbucks">
+        
+        </div>
+        <!--THUMBS RODAPÉ-->
+        <ul class="thumb">
+            <li><img src="/assets/thumb1.png" onclick="imgSlider('/assets/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="/assets/thumb2.png" onclick="imgSlider('/assets/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="/assets/thumb3.png" onclick="imgSlider('/assets/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <!--SOCIAL MEDIA-->
+        <ul class="sci">
+            <li><a href="#"><img src="/assets/facebook.png" ></a></li>
+            <li><a href="#"><img src="/assets/twitter.png" ></a></li>
+            <li><a href="#"><img src="/assets/instagram.png" ></a></li>
+        </ul>
+    </section>
+
+
+    <!--SCRIPT-->
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
